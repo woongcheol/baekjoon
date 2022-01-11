@@ -1,8 +1,3 @@
-T = int(input())
-N = []
-for i in range(T):
-    N.append(i)
-    maxmin = list(int(input().split()))
-    for j in maxmin:
-        N.append[i] = j
-print(N)
+cnt = int(input())
+numbers = list(map(int, input().split()))
+print(min(numbers),max(numbers))
