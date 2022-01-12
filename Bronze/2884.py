@@ -1,10 +1,10 @@
-from datetime import datetime
-import time
-
-H, M = input().split()
-time_1 = datetime.strptime(f"{H}:{M}", "%H:%M")
-time_2 = datetime.strptime("00:45", "%H:%M")
-print(time.strftime('%H %M', time_2))
-# time_3 = time_1 - time_2
-
-# print(time_1)
+H, M = map(int, input().split())
+if M > 45:
+    print(f'{H} {M-45}')
+elif M == 45:
+    print(f'{H} {0}')
+else:
+    if H != 0:
+        print(f'{H-1} {M+15}')
+    else:
+        print(f'{23} {M+15}')
