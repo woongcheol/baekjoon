@@ -20,19 +20,28 @@ for i in C: # 시퀀스 객체(맵)
     print(i) # abcd
 """
 
-S = input()
-T = "abcdefghijklmnopqrstuvwxyz"
-for i in range(len(T)):
-    j = 0
-    while j < len(S):
-        if T[i] == S[j]:
-            print(S.index(S[j]), end=" ")
-            break
-        elif j == 3 and T[i] == "z":
-            print(-1)
-            break
-        elif j == 3:
-            print(-1, end=" ")
-            j += 1
-        else:
-            j += 1
+# S = input()
+# T = list(range(97,123))
+# for i in range(len(T)):
+#     j = 0
+#     while j < len(S):
+#         if T[i] == "z" and T[i] == S[j]: # 마지막 z가 같을 경우
+#             print(S.index(S[j]))
+#             break
+#         elif T[i] == S[j]: # T 요소와 같을 경우
+#             print(S.index(S[j]))
+#             break
+#         elif T[i] == "z": # 마지막 z가 없을 경우
+#             print(-1)
+#             break
+#         else: # 없을 경우
+#             if j == len(S)-1:
+#                 print(-1)
+#             j += 1
+
+word = input()
+alphabet = list(range(97,123))  # 아스키코드 숫자 범위
+
+for x in alphabet :
+    print(word.find(chr(x)))
+    print(type(word.find(chr(x)))) 
