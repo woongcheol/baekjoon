@@ -5,8 +5,10 @@ sort = list()
 for _ in range(N):
     sort.append(input())
 
+print(set(sort))
+sort = list(set(sort))
 sort.sort()
-sort.sort(key = len)
+set = sort.sort(key = len)
 
 for i in sort:
     print(i)
